@@ -85,7 +85,18 @@ if (err) console.error(err);
 
 })
 
-
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "r!type"){
+message.channel.startTyping();
+}
+});
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "r!type"){
+message.channel.stopTyping();
+}
+});
 
 
 
