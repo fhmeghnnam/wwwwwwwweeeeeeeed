@@ -16,20 +16,44 @@ client.on('message', msg => {
   }
 });
 
-const child_process = require("child_process");
-const adminprefix = "-";
-const devs = ['396958215377780747'];
-
-client.on('message', message => {
-if(message.content === adminprefix + "restart") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**);
-        console.log(⚠️ جاري اعادة تشغيل البوت... ⚠️);
-        client.destroy();
-        child_process.fork(__dirname + "/الملف.js");
-        console.log(تم اعادة تشغيل البوت);
-    }
+const codes = {
+    ' ': '   ',
+    '0': '0⃣',
+    '1': '1⃣',
+    '2': '2⃣',
+    '3': '3⃣',
+    '4': '4⃣',
+    '5': '5⃣',
+    '6': '6⃣',
+    '7': '7⃣',
+    '8': '8⃣',
+    '9': '9⃣',
+    '!': '❕',
+    '?': '❔',
+    '#': '#⃣',
+    '*': '*⃣'
+  };
   
+  'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+    codes[c] = codes[c.toUpperCase()] = ` :regional_indicator_${c}:`;
+  });
+  
+  
+  client.on('message' , async message => {
+      var prefix = "-";
+         if(message.content.startsWith(prefix + "emoji")) {
+            let args = message.content.split(" ").slice(1);
+    if (args.length < 1) {
+      message.channel.send('You must provide some text to emojify!');
+  }
+  
+  message.channel.send(
+      args.join(' ')
+          .split('')
+          .map(c => codes[c] || c)
+          .join('')
+  );
+  };
   });
 
 
