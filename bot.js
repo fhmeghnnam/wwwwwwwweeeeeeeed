@@ -16,18 +16,21 @@ client.on('message', msg => {
   }
 });
 
-client.on("message", message => {
-    var prefix = "!"
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "skin") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
-    message.channel.send(image)
-        }
-    });
+const child_process = require("child_process");
+const adminprefix = "-";
+const devs = ['396958215377780747'];
+
+client.on('message', message => {
+if(message.content === adminprefix + "restart") {
+      if (!devs.includes(message.author.id)) return;
+          message.channel.send(⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**);
+        console.log(⚠️ جاري اعادة تشغيل البوت... ⚠️);
+        client.destroy();
+        child_process.fork(__dirname + "/الملف.js");
+        console.log(تم اعادة تشغيل البوت);
+    }
+  
+  });
 
 
 
