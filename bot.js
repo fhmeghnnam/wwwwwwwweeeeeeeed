@@ -46,7 +46,7 @@ fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
       credits: m + 0.5,
   }
 
-    if(message.content.startsWith(prefix + "credit" || prefix + "رصيدي")) {
+    if(message.content.startsWith(prefix + "فلوسي" || prefix + "رصيدي")) {
 message.channel.send(`**${message.author.username}, your :credit_card: balance is \`\`${userData.credits}\`\`.**`);
 }
 });
