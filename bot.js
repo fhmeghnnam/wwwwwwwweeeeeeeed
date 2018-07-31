@@ -17,6 +17,11 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`in ${client.guilds.size} servers `)
+    console.log(`[Users] ${client.users.size}`)
+	client.user.setGame(`NoName Team | $help`,"http://twitch.tv/WeDontHaveChannel")
+    client.user.setStatus("dnd")
 });
 let points = JSON.parse(fs.readFileSync('./typePTS.json', 'utf8')); // يقوم بقراءه ملف النقاط , والمسار حق النقاط
 const prefix = "-"; // البرفكس العام لجميع الأوامر
@@ -69,8 +74,7 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
   fs.writeFile("./typePTS.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   })
- });
-
+})
 
 
 
