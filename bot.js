@@ -17,7 +17,7 @@ client.on('message', msg => {
 });
 
 client.on('ready', () => {
-
+});
 let points = JSON.parse(fs.readFileSync('./typePTS.json', 'utf8')); // يقوم بقراءه ملف النقاط , والمسار حق النقاط
 const prefix = "-"; // البرفكس العام لجميع الأوامر
 
