@@ -69,8 +69,7 @@ if (message.content.startsWith(prefix + 'نقاطي')) {
   fs.writeFile("./typePTS.json", JSON.stringify(points), (err) => {
     if (err) console.error(err)
   })
-})
-
+ });
 
 
 
