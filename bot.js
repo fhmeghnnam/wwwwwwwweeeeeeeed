@@ -35,9 +35,7 @@ client.on('message', msg => {
   );
   };
   });
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+
 /*جميع الحقوق محفوظهه لريبل ولسيرفر كودز
 رآح يرسل للأونر تحذير + م يتطلب ملفات سويته لكم داتا مؤقت
 سو روم بأسم log 
