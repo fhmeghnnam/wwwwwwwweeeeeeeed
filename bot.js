@@ -16,7 +16,27 @@ client.on('message', msg => {
   }
 });
 
-
+const codes = {
+    ' ': '   ',
+    '0': '0⃣',
+    '1': '1⃣',
+    '2': '2⃣',
+    '3': '3⃣',
+    '4': '4⃣',
+    '5': '5⃣',
+    '6': '6⃣',
+    '7': '7⃣',
+    '8': '8⃣',
+    '9': '9⃣',
+    '!': '❕',
+    '?': '❔',
+    '#': '#⃣',
+    '*': '*⃣'
+  };
+  
+  'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+    codes[c] = codes[c.toUpperCase()] = ` :regional_indicator_${c}:`;
+  });
   
   
   client.on('message' , async message => {
@@ -35,7 +55,9 @@ client.on('message', msg => {
   );
   };
   });
-
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 /*جميع الحقوق محفوظهه لريبل ولسيرفر كودز
 رآح يرسل للأونر تحذير + م يتطلب ملفات سويته لكم داتا مؤقت
 سو روم بأسم log 
@@ -172,7 +194,6 @@ client.on("message", message => {
     });
 
 
-    
 
 
 
@@ -275,7 +296,6 @@ client.on('message', msg => {
       //غيره هنا كمان اذا غيرت فوق
       msg.guild.channels.find('name', 'suggestions').send(`
       تم الاقتراح من قبل : ${msg.member}
-
       الاقتراح :
       ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
       `)
@@ -993,7 +1013,6 @@ client.on('message', message => {
                 .setAuthor(message.guild.name, message.guild.iconURL)
         .setDescription(`
 **
-
 -${message.guild.name}  Link
 **`)
       message.author.sendEmbed(Embed11)
@@ -1233,9 +1252,6 @@ client.on('message', message => {
 - البوت فيه خصائص جديدة العاب جديدة:video_game:
 -كل يوم خاصية جديدة :new:
 ==================================
-
-
-
  الاوامر العامه
  -credits ⇏ لامعرفت رصيدك
  -daily ⇏ لااخذ رصيد يومي
@@ -1262,8 +1278,6 @@ ${prefix}bc⇏ لا ارسال رساله منخيلاال البوت
 ${prefix}clear ⇏ لامسح الشات مع العدد
 ${prefix}ban⇏ لإ عطاء الشخ باند
 ${prefix}kick⇏ لإ اطاء الشخص كيك
-
-
 مصمم البوت : ===>Legend_FH#0778<====
 **`);
 
