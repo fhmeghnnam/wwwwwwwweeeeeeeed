@@ -32,7 +32,7 @@ const codes = {
     '?': '❔',
     '#': '#⃣',
     '*': '*⃣'
- });
+ })
   
   'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
     codes[c] = codes[c.toUpperCase()] = ` :regional_indicator_${c}:`;
