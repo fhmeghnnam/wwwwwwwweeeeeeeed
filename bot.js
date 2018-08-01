@@ -193,21 +193,7 @@ client.on("message", message => {
         }
     });
 
-client.on('message', message => {
-    
-    if (message.content === "V") {
-        setInterval(function(){
-        message.edit('**✱➼**')    
-        message.edit('**✱➼ V**')    
-        message.edit('**✱➼ VI**')
-        message.edit('**✱➼ VIG**')
-        message.edit('**✱➼ VIGE**')
-        message.edit('**✱➼ VIGET**')
-        message.edit('**✱➼ VIGETA**')
-        message.edit('**✱➼ VIGETA.**')
-    
-        }, 1000)
-    });
+
     
 
 
