@@ -229,6 +229,21 @@ ${users.join('\n')}
 });
 
 
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "r!type"){
+message.channel.startTyping();
+}
+});
+client.on('message', message =>{
+    if (message.author.bot) return;
+    if(message.content == "r!type"){
+message.channel.stopTyping();
+}
+});
+
+
+
 
 
 const credits = JSON.parse(fs.readFileSync("./creditsCode.json", "utf8"));
