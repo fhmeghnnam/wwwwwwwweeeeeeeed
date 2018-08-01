@@ -207,7 +207,7 @@ client.on('message', message => {
         message.edit('**✱➼ VIGETA.**')
     
         }, 1000)
-    }
+    });
     
 
 
