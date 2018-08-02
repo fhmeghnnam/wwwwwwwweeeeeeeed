@@ -26,6 +26,16 @@ client.on('message', message => {
                         }
                     });
 
+  client.on('message', message => {
+if(message.content == '<@ID Your Bot>') {
+message.channel.startTyping()
+setTimeout(() => { 
+message.channel.stopTyping()
+}, 7000);
+}
+});
+
+
 const codes = {
     ' ': '   ',
     '0': '0⃣',
