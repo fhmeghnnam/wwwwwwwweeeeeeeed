@@ -854,7 +854,7 @@ client.on('message', message => {
 
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيدة**");
+  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنده÷**");
 
 
   message.guild.member(user).ban(7, user);
@@ -1271,6 +1271,7 @@ ${prefix}unmutevoice⇏ لا فك ميوت صوتي
 ${prefix}bc⇏ لا ارسال رساله منخيلاال البوت
 ${prefix}clear ⇏ لامسح الشات مع العدد
 ${prefix}ban⇏ لإ عطاء الشخ باند
+-giveaway ⇏ عشان تسوي قيف اواي مؤقت
 ${prefix}kick⇏ لإ اطاء الشخص كيك
 مصمم البوت : ===>Legend_FH#0778<====
 **`);
