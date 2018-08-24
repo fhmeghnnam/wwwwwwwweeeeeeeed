@@ -854,7 +854,7 @@ client.on('message', message => {
 
   if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنده÷**");
+  .bannable) return message.reply("**يجب ان تكون رتبة البوت اعلي من رتبه الشخص المراد تبنيده÷**");
 
 
   message.guild.member(user).ban(7, user);
@@ -1183,7 +1183,25 @@ client.on('message', message => {
   }
 })
 
+const devs = ['477786564651384834' , '477786564651384834' , '' , ''];
+client.on('message', message => {
+var prefix = "-";
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
 
+if (message.content.startsWith(prefix + 'changename')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم ?`)
+  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
+} else
+if (message.content.startsWith(prefix + 'changepic')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
+
+}
+});
 client.on('message', msg => {
   if (msg.content === '-suppport') {
     msg.reply('https://discord.gg/fNUqS4m');
