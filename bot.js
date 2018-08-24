@@ -449,16 +449,16 @@ client.on('guildCreate', guild => {
 client.on('message', msg => {
 
   if(msg.content.startsWith('-suggest')) {
-    if(!msg.channel.guild) return msg.reply('** هاذا الامر فقط للسيرفرات**');
-    if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions)**');
+    if(!msg.channel.guild) return msg.reply('** This commands only for servers**');
+    if(!msg.guild.channels.find('name', 'suggestions')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions-الاقتراحات)**');
     let args = msg.content.split(" ").slice(1);
-    if(!args[1]) return msg.reply('الرجاء كتابة الاقتراح')
+    if(!args[1]) return msg.reply('write your suggest')
     //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
     if(msg.guild.channels.find('name', 'suggestions')) {
       //غيره هنا كمان اذا غيرت فوق
       msg.guild.channels.find('name', 'suggestions').send(`
-      تم الاقتراح من قبل : ${msg.member}
-      الاقتراح :
+      the suggest from : ${msg.member}
+      Suggestion :
       ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
       `)
       .then(function (message) {
@@ -1497,7 +1497,7 @@ client.on('message', message => {
 
   if (message.content.startsWith('-bc')) {
           if (!args[0]) {
-message.channel.send("**$bc <message>**");
+message.channel.send("**-bc <message>**");
 return;
 }
 message.guild.members.forEach(m => {
