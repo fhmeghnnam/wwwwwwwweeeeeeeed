@@ -1,5 +1,5 @@
 let message_handler = {};
-    let tolerancia = [4, 3500]; //4 messages in less than 1200ms = spam
+    let tolerancia = [2, 3500]; //2 messages in less than 1200ms = spam
     module.exports = function(bot, callback){
       bot.on('message', message => {
         if(message.author.bot) return;
