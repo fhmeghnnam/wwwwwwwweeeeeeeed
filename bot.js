@@ -158,7 +158,7 @@ const codes = {
 
 
 client.on('message', message => {
-    if(message.content.includes('youtube')){
+    if(message.content.includes('www')){
                                             if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
         message.delete()
@@ -751,8 +751,6 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`Me_3nbaia upgrade Me`,"http://twitch.tv/vAmmvr_");
-   client.user.setStatus("idle");
 });
 
 
@@ -1307,7 +1305,7 @@ ${prefix}id ⇏ لاضهار معلوماتك الشخصيه
 ${prefix}avatar ⇏ لا اضهار صورتك الشخصية
 ${prefix}support⇏ سيرفر الدعم الفني
 ${prefix}invite⇏ لإ اضافت البوت
--skin {اسمك بماينكرافت} ⇏ skin 3d
+-mcskin {اسمك بماينكرافت} ⇏ skin 3d
 -emoji {word} ⇏ يحول لك الكلمة الى احرف ايموجي
 -micr ⇏ سؤال ماينكرافتي سريع 
 -suggest ⇏ لكتابة اقتراح
@@ -1389,7 +1387,7 @@ client.on('message', message => {
   }
 
 
-  if (message.content.startsWith('$bc')) {
+  if (message.content.startsWith('-bc')) {
           if (!args[0]) {
 message.channel.send("**$bc <message>**");
 return;
