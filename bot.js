@@ -751,7 +751,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`Legend_FH upgrade Me`,"http://twitch.tv/vAmmvr_");
+  client.user.setGame(`Me_3nbaia upgrade Me`,"http://twitch.tv/vAmmvr_");
    client.user.setStatus("idle");
 });
 
@@ -1193,9 +1193,9 @@ client.on('message', msg => {
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
-  const verifed = ["460865299718078464"];
-if (message.content.startsWith(prefix + 'owner')) {
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** ولكم يا ذكي **` + `✅`)
+  const verifed = ["477786564651384834"];
+if (message.content.startsWith(prefix + 'انا اونر ؟')) {
+if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب انت الاونر **` + `✅`)
 } else {
    message.reply('**انت لست صاحب البوت**' + '❌');
 }
