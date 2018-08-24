@@ -1182,25 +1182,58 @@ client.on('message', message => {
 
   }
 })
-
-const devs = ['460865299718078464' , '477786564651384834' , '' , ''];
-client.on('message', message => {
-var prefix = "-";
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-    var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
-
-if (message.content.startsWith(prefix + 'changename')) {
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم ?`)
-  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
-} else
-if (message.content.startsWith(prefix + 'changepic')) {
-  client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
-
-}
+client.on('message', function(message) {
+	const myID = "460865299718078464";
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(message.content.startsWith(prefix + "setname")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setUsername(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "stream")) {
+		        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(args , 'https://twitch.tv/6xlez1');
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "play")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setGame(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "listen")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(args, {type:'LISTENING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "watch")) {
+				        if(message.author.id !== myID) return;
+            if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+        client.user.setActivity(args, {type:'WATCHING'});
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    } else if(message.content.startsWith(prefix + "setavatar")) {
+				        if(message.author.id !== myID) return;
+        client.user.setAvatar(args);
+        message.channel.send(':white_check_mark: Done!').then(msg => {
+                if(!args) return message.reply('اكتب الحالة اللي تريدها.');
+           msg.delete(5000);
+          message.delete(5000);
+        });
+    }
 });
 client.on('message', msg => {
   if (msg.content === '-suppport') {
