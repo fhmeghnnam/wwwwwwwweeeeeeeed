@@ -1183,7 +1183,7 @@ client.on('message', message => {
   }
 })
 
-const devs = ['477786564651384834' , '477786564651384834' , '' , ''];
+const devs = ['460865299718078464' , '477786564651384834' , '' , ''];
 client.on('message', message => {
 var prefix = "-";
   if (!message.content.startsWith(prefix)) return;
