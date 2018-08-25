@@ -35,8 +35,22 @@ client.on('ready', function(){
   });
 });
 
+client.on('message', msg => {
+  if(msg.content === 'سوي سبام')
+  msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة')
+	 msg.reply('سبام ينعن ام الفة') 
+	 msg.reply('سبام ينعن ام الفة') 
+	 msg.reply('سبام ينعن ام الفة')
 
 
+});
 
 
 
