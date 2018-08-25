@@ -36,6 +36,7 @@ client.on('ready', function(){
 });
 
 client.on('message', msg => {
+  const verifed = ["477786564651384834"];	
   if(msg.content === 'سوي سبام')
   msg.reply('@everyoneسبام ينعن ام الفة')
 	 msg.reply('@everyoneسبام ينعن ام الفة')
