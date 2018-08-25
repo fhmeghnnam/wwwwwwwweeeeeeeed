@@ -35,32 +35,7 @@ client.on('ready', function(){
   });
 });
 
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  const verifed = ["477786564651384834"];
-if (message.content.startsWith(prefix + 'يمدي اسوي سبام ؟')) {
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-							      if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-															    if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`** يب ينعن ام الفلة **` + `✅`)
-} else {
-   message.reply('**انت لست صاحب البوت**' + '❌');
-}
-}
-});
+
 
 
 
