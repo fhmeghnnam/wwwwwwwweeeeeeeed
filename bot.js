@@ -262,42 +262,22 @@ const codes = {
 
 
 
-let rebel;
-client.on("ready", async  => {
-    let guild = client.guilds.get("ID SERVER");
-  let users = guild.members.map(member => member.user.id);
-  let i;
-  rebel=0;
-for (i=0 ; i < users.length ; i++) {
- let   check = guild.members.get(users[i]);
-if(!check.voiceChannelID){
-        continue;
-}else{
-  rebel++;
-}
-}
-guild.channels.find('id', 'ID ROOM').setName(" Voice「"+rebel+"」");
-  client.setInterval(() =>{
-    let d = Date.now()
-  }, 5000);
-});
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-    let guild = client.guilds.get("482342402217082901");
-let newUserChannel = newMember.voiceChannel
-let oldUserChannel = oldMember.voiceChannel
- if(oldUserChannel === undefined && newUserChannel !== undefined) {
-   rebel++;
-guild.channels.find('id', '487248787375521792').setName(" Voice「"+rebel+"」");
-} else if(newUserChannel === undefined){
-  rebel--;
-guild.channels.find('id', '487248787375521792').setName(" Voice「"+rebel+"」");
-}
-});
-client.on('message', Codes => {
-  
-  if(Codes.content === "-صوت") {
-      Codes.channel.send(" Voice「"+rebel+"」");
-}
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "setvoice")) {
+  if(!message.guild.member(message.author).hasPermissions('MANAGE_CHANNELS')) return message.reply('❌ **ليس لديك الصلاحيات الكافية**');
+  if(!message.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return message.reply('❌ **ليس معي الصلاحيات الكافية**');
+  message.channel.send('✅| **تم عمل الروم بنجاح**');
+  message.guild.createChannel(`Voice Online : [ ${message.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
+    console.log(`Voice online channel setup for guild: \n ${message.guild.name}`);
+    c.overwritePermissions(message.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+    setInterval(() => {
+      c.setName(`Voice Online : [ ${message.guild.members.filter(m => m.voiceChannel).size} ]`)
+    },1000);
+  });
+  }
 });
 
 
