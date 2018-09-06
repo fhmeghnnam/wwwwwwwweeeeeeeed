@@ -25,15 +25,7 @@ client.on('message', message => {
          message.channel.send({embed:embed});
                         }
                     });
-client.on('ready', function(){
-  require("./antispam.js")(client, function(message){
-     message.delete().then(yumz => {
-     message.channel.send(`stop spamming kid <@${message.author.id}>`).then(spammer => {
-     spammer.delete(2000)
-   });
-   });
-  });
-});
+
 
 
 
@@ -267,16 +259,46 @@ const codes = {
   });
 
 
-client.on('message', message => {
-    if(message.content.includes('www')){
-                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** ممنوع نشر الروابط :angry: ! **`)
-    }
+
+
+
+let rebel;
+client.on("ready", async  => {
+    let guild = client.guilds.get("ID SERVER");
+  let users = guild.members.map(member => member.user.id);
+  let i;
+  rebel=0;
+for (i=0 ; i < users.length ; i++) {
+ let   check = guild.members.get(users[i]);
+if(!check.voiceChannelID){
+        continue;
+}else{
+  rebel++;
+}
+}
+guild.channels.find('id', 'ID ROOM').setName(" Voice「"+rebel+"」");
+  client.setInterval(() =>{
+    let d = Date.now()
+  }, 5000);
+});
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    let guild = client.guilds.get("482342402217082901");
+let newUserChannel = newMember.voiceChannel
+let oldUserChannel = oldMember.voiceChannel
+ if(oldUserChannel === undefined && newUserChannel !== undefined) {
+   rebel++;
+guild.channels.find('id', '487248787375521792').setName(" Voice「"+rebel+"」");
+} else if(newUserChannel === undefined){
+  rebel--;
+guild.channels.find('id', '487248787375521792').setName(" Voice「"+rebel+"」");
 }
 });
-
+client.on('message', Codes => {
+  
+  if(Codes.content === "-صوت") {
+      Codes.channel.send(" Voice「"+rebel+"」");
+}
+});
 
 
 client.on("message", message => {
