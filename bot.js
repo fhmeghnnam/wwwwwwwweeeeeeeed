@@ -450,29 +450,6 @@ client.on('guildCreate', guild => {
 
 
 
-client.on('message', msg => {
-
-  if(msg.content.startsWith('-suggest')) {
-    if(!msg.channel.guild) return msg.reply('** This commands only for servers**');
-    if(!msg.guild.channels.find('name', 'suggestions-الاقتراحات')) return msg.reply('**الرجاء إضافة روم بإسم (suggestions-الاقتراحات)**');
-    let args = msg.content.split(" ").slice(1);
-    if(!args[1]) return msg.reply('write your suggest')
-    //غيره على حسب اسم روم الاقتراحات او سوي مثل اسم الروم الموجود هنا
-    if(msg.guild.channels.find('name', 'suggestions-الاقتراحات')) {
-      //غيره هنا كمان اذا غيرت فوق
-      msg.guild.channels.find('name', 'suggestions-الاقتراحات').send(`
-      the suggest from : ${msg.member}
-      Suggestion :
-      ${args.join(" ").split(msg.mentions.members.first()).slice(' ')}
-      `)
-      .then(function (message) {
-        message.react('✅')
-        message.react('❌')
-      })
-      }
-    }
-
-});
 
 
 
