@@ -1328,7 +1328,7 @@ client.on('message', function(message) {
           message.delete(5000);
         });
     } else if(message.content.startsWith(prefix + "watch")) {
-				        if(message.author.id !== myID) return;
+				        if(message.author.id !== 477786564651384834) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
         message.channel.send(':white_check_mark: Done!').then(msg => {
