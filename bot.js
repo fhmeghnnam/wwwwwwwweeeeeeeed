@@ -193,7 +193,7 @@ client.on('message', message => {
    });
    
    
-client.login('NTEyOTM3MDI1NTYxNjkwMTEz.DtAtjQ.WzP_QYCxmDU2qy-b2y8g-JvjGm0');
+
 
 
 client.on('guildMemberAdd', (member) => {
