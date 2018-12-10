@@ -11,7 +11,7 @@ client.on('message', msg => {
   }
 });
 
-client.login('');
+
 
 
 
@@ -43,7 +43,7 @@ client.on('message', msg => {
 
 
 
-client.login('');
+
 
 
 
@@ -67,7 +67,7 @@ var prefix = "$";
     }
       });
 	  
-client.login('');
+
 
 
 client.on('message', message => {
@@ -109,7 +109,7 @@ client.on('message', message => {
 }
 });
 
-client.login('');
+
 
 client.on('message', message => {
 	var prefix = "$"
@@ -148,7 +148,7 @@ client.on('message', message => {
 }
 });
 
-client.login('');
+
 
 
 client.on('message', message => {
@@ -179,7 +179,7 @@ var prefix = "$";
        
 });
 
-client.login('');
+
 
 client.on('message', message => {
         if (message.content === "$inv") {
@@ -200,7 +200,7 @@ client.on('guildMemberAdd', (member) => {
 member.addRole(member.guild.roles.find('name', 'Twix'));
 });
 
-client.login('');
+
 
 
 
@@ -216,7 +216,7 @@ client.on('ready', () => {
 });
 
 
-client.login('');
+
 
 client.on("message", message => {
     const prefix = "$"
@@ -237,7 +237,6 @@ client.on("message", message => {
       }
   });
 
-client.login('');
 
 client.on("message", message => {
     if (message.author.bot) return;
@@ -274,7 +273,7 @@ client.on("message", message => {
   
   });
   
-client.login('');
+
 
 client.on("message", message => {
     if (message.author.bot) return;
@@ -309,7 +308,7 @@ client.on("message", message => {
   
   });
 
-client.login('');  
+
 
 client.on('message', message => { 
 	var prefix ="$";
@@ -341,7 +340,7 @@ client.on('message', message => {
     message.channel.send(id)
 }       });
 
-client.login('');
+
 
 client.on('message', message => {
 	var prefix = "$";
@@ -375,7 +374,7 @@ message.channel.send("``�� ������ ��� "+ message.mentions.
 message.react("?")
  }}});
  
-client.login('');
+
 
 client.on('ready', () => {
    console.log(`----------------`);
@@ -388,7 +387,7 @@ client.on('ready', () => {
    client.user.setStatus("dnd")
 });
 
-client.login('');
+
 
 
 client.on('message', message => {
