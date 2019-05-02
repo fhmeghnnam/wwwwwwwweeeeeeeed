@@ -6,10 +6,10 @@ const prefix = "$"; //تعريف البرفك
 
 
 client.on('ready',async () => {
+378652303881797632
 
 
-
-    client.channels.find(ch => ch.id === "573490626826600448" && ch.type === 'voice').join();
+    client.channels.find(ch => ch.id === "378652303881797632" && ch.type === 'voice').join();
     clie
   });
 	
