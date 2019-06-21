@@ -10,7 +10,7 @@ client.on('ready',async () => {
 
 
     client.channels.find(ch => ch.id === "583914171951743034" && ch.type === 'voice').join();
-    clie
+    
   });
 	
 	
