@@ -8,10 +8,6 @@ bot.on('guildMemberAdd', member => {
    bot.channels.get('598500448537804812').send("Hi boys !!@#!@3"); 
 });
 
-bot.on('ready', () => {
-    bot.user.setStatus('dnd')
-});
-
 
 bot.login(process.env.BOT_TOKEN);
 
