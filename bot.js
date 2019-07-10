@@ -65,5 +65,5 @@ try {
 } catch (error) {
   console.error("CAUGHT ERROR: " + error);
 }
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
