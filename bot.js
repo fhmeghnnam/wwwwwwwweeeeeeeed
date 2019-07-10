@@ -9,7 +9,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('ready', () => {
-    bot.user.setStatus('available')
+    bot.user.setStatus('dnd')
     bot.user.setPresence({
         game: {
             name: 'Fhme !!',
