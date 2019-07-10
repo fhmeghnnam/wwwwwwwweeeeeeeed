@@ -10,13 +10,6 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('ready', () => {
     bot.user.setStatus('dnd')
-    bot.user.setPresence({
-        game: {
-            name: 'Fhme !!',
-            type: "dnd",
-            
-        }
-    });
 });
 
 
