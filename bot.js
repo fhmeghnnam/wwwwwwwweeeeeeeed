@@ -9,5 +9,23 @@ bot.on('guildMemberAdd', member => {
 });
 
 
+var spam = false;
+if (message.content === 'spam') {
+    if (message.author.id !== bot.user.id) { // Replace bot with the instance of your bot Client.
+        spam = true;
+    } else {
+        if(spam) {
+            message.channel.send('spam');
+        }
+    }
+    if (message.content === 'stop spam') {
+        if(spam) {
+            message.channel.send('stopped');
+        }
+        spam = false;
+    }
+}
+
+
 bot.login(process.env.BOT_TOKEN);
 
