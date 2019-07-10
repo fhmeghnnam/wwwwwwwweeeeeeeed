@@ -50,7 +50,7 @@ try {
       }
 
       message.delete().catch(O_o=>{})
-      sendSpamMessage();
+      sendSpamMessage0753047530495834583-=85();
     }
 
     if (command === "prune") {
