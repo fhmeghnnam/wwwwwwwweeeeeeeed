@@ -13,7 +13,7 @@ bot.on('guildMemberAdd', member => {
 
 
 
- client.on('message', message => {
+ bot.on('message', message => {
     
 const args = message.content.slice(prefix.length).split(' ');
    if (message.content === '$say') {
