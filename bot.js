@@ -16,7 +16,7 @@ bot.on('guildMemberAdd', member => {
  bot.on('message', message => {
     
 const args = message.content.slice(prefix.length).split(' ');
-   if (message.content.startWith(prefix + "say")) {
+   if (message.content.startsWith(prefix + "say")) {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return ;
   
   message.channel.send(`${args[1]}`);
