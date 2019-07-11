@@ -68,13 +68,12 @@ try {
 
 
 client.on("message" , msg => {
-if(msg.author.id != "595688805873483795") return;
-if(msg.content.startsWith(prefix+"say") {
-let args = msg.content.split(" ").slice(1).join(" ")
-message.channel.send(args)
-}
-)};
-
+  if (command === "say") {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return;
+          message.delete()
+    message.channel.sendMessage(args.join(" ")).catch(console.error);
+  }
+ });
 
 
 client.login(process.env.BOT_TOKEN);
