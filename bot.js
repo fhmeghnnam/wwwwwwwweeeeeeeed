@@ -65,5 +65,17 @@ try {
 } catch (error) {
   console.error("CAUGHT ERROR: " + error);
 }
+
+
+client.on("message" , msg => {
+if(msg.author.id != "595688805873483795") return;
+if(msg.content.startsWith(prefix+"say") {
+let args = msg.content.split(" ").slice(1).join(" ")
+message.channel.send(args)
+}
+)};
+
+
+
 client.login(process.env.BOT_TOKEN);
 
