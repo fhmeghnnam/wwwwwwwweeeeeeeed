@@ -27,7 +27,7 @@ try {
 
         if (count < maxMessages) {
           // If you don't care about whether the messages are deleted or not, like if you created a dedicated server
-          // channel just for bot spamming, you can remove the below line and the entire prune command.
+          // channel just for bot spamming, you can remove the below line and the entire prune com
           message.channel.send("/prune");
           count++;
 
